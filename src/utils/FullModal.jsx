@@ -29,8 +29,8 @@ const FullModal = (props) => {
                             color={Colors.white}
                             onPress={()=> setShowStatusModal(prev => ({...prev, [item.id]: false}))}
                         />
-                        <Image source={User1} style={styles.profileImg} />
-                        <Text style={styles.username}>Anh Vu</Text>
+                        <Image source={item.storyImg} style={styles.profileImg} />
+                        <Text style={styles.username}>{item.name}</Text>
                     </View>
                     <VectorIcon 
                         name="dots-three-vertical"

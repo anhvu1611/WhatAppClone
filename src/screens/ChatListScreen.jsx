@@ -3,13 +3,18 @@ import React from 'react'
 import ChatList from '../components/ChatList'
 import VectorIcon from '../utils/VectorIcon'
 import { Colors } from '../theme/Colors'
+import { useNavigation } from '@react-navigation/native'
 
 const ChatListScreen = () => {
+  const navigation = useNavigation()
+  const onNavigate = () => {
+    navigation.navigate('ContactScreen')
+  }
   return (
     <View style={styles.container}>
       <ScrollView>
         <ChatList />
-        <TouchableOpacity style={styles.contactIcon}>
+        <TouchableOpacity style={styles.contactIcon} onPress={onNavigate}>
           <VectorIcon 
             name="message-reply-text"
             type="MaterialCommunityIcons"

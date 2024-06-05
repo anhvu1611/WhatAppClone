@@ -54,9 +54,9 @@ const ChatBody = () => {
           MessagesData.map(item => (
             <>
               {item.id === userId ?
-                (<UserMessageView message={item.message} time={item.time} />)
+                (<UserMessageView key={item.id} message={item.message} time={item.time} />)
                 :
-                (<OtherUserMessageView message={item.message} time={item.time}/>)
+                (<OtherUserMessageView key={item.id} message={item.message} time={item.time}/>)
               }
             </>
           ))

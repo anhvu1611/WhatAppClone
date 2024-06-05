@@ -10,7 +10,7 @@ const ViewedStatus = () => {
       {
             ViewedStatusData.map(item => (
                 <>
-                    <View style={styles.storySection}>
+                    <View style={styles.storySection} key={item.id}>
                         <View style={styles.imgStory}>
                             <Image source={item.storyImg} style={styles.statusStyle}/>
                         </View>
